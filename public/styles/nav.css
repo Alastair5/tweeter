@@ -8,8 +8,9 @@ nav {
   align-items: center;
 }
 
+/* Site name */
 .nav-title {
-  font-family: 'Bungee', sans-serif;
+  font-family: 'Bungee';
   font-size: 1.5em;
   margin: 1.5em;
 }
