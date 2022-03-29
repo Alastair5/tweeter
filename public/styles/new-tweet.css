@@ -1,0 +1,22 @@
+new-tweet {
+  display: flex;
+  justify-content: center;
+}
+
+#tweet-text {
+  width: 70vw;
+  max-height: 2rem;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid #251b05;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background-color: #4056a1;
+  color: #FFFFFF;
+  font-family: 'Bungee', sans-serif;
+  margin: 1%;
+}
