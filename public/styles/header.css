@@ -1,5 +1,5 @@
 .header {
-  height: 400px;
+  height: 550px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -8,4 +8,8 @@
   background-color: #c98600;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   
+}
+
+.avatar-header {
+  margin-top: 150px;
 }
