@@ -5,13 +5,14 @@ new-tweet {
 
 #tweet-text {
   width: 70vw;
-  max-height: 2rem;
+  max-height: 4rem;
   background: none;
   outline: none;
   border: none;
-  border-bottom: 3px solid #251b05;
+  border-bottom: 3px solid slategray;
   display: flex;
   align-items: center;
+  /* justify-content: space-around; */
 }
 
 button {
@@ -19,4 +20,18 @@ button {
   color: #FFFFFF;
   font-family: 'Bungee', sans-serif;
   margin: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tracker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.counter {
+  margin: 10px;
+  font-family: 'Bungee', sans-serif;
 }
