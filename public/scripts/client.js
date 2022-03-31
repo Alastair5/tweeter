@@ -56,7 +56,7 @@ const createTweetElement = function(tweetData) {
 const renderTweets = function(data) {
   for (let tweet of data) {
     const $tweet = createTweetElement(tweet);
-    console.log($tweet);
+    // console.log($tweet);
     $('#tweets-container').append($tweet);
   }
 };
@@ -64,5 +64,12 @@ const renderTweets = function(data) {
 
 $(document).ready(() => {
   renderTweets(data);
+
+  $(".textarea").submit(function(event) {
+    event.preventDefault();
+    const tweetInput = $(this).serialize();
+    $.post("/tweets", tweetInput);
+    console.log(tweetInput);
+  });
 });
 
