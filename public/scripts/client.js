@@ -57,7 +57,6 @@ const createTweetElement = function(tweetData) {
 const renderTweets = function(data) {
   for (let tweet of data) {
     const $tweet = createTweetElement(tweet);
-    // console.log($tweet);
     $('#tweets-container').prepend($tweet);
   }
 };
@@ -75,8 +74,13 @@ $(document).ready(() => {
   $(".textarea").submit(function(event) {
     event.preventDefault();
     const tweetInput = $(this).serialize();
+    const tweetLimit = $("#tweet-text").val().length;
+    if (tweetLimit <= 0) {
+      return alert("Please enter a tweet");
+    } else if (tweetLimit > 140) {
+      return alert("Please keep your tweet under 140 characters");
+    }
     $.post("/tweets", tweetInput);
-    // console.log(tweetInput);
   });
 });
 
