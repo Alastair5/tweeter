@@ -25,6 +25,12 @@
 //   }
 // ];
 
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweetData) {
   let $tweet = `
     <article class="tweets">
@@ -38,7 +44,7 @@ const createTweetElement = function(tweetData) {
           </div>
         </header>
         <div class="tweets-body">
-          <p>${tweetData.content.text}</p>
+          <p>${escape(tweetData.content.text)}</p>
         </div>
         <footer class="tweets-footer">
           <div class="date">
