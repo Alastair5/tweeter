@@ -81,6 +81,7 @@ $(document).ready(() => {
       return alert("Please keep your tweet under 140 characters");
     }
     $.post("/tweets", tweetInput);
+    loadTweets();
   });
 });
 
