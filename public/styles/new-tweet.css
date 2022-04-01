@@ -4,7 +4,7 @@ new-tweet {
 }
 
 #tweet-text {
-  width: 70vw;
+  width: 100%;
   max-height: 4rem;
   background: none;
   outline: none;

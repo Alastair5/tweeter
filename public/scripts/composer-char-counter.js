@@ -1,3 +1,4 @@
+// New tweet inpup counter
 $(document).ready(function() {
   $("#tweet-text").keyup(function() {
     let charCount = $(this).val().length;

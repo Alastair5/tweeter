@@ -1,6 +1,7 @@
 .header {
-  height: 550px;
+  height: 400px;
   width: 100%;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,5 +12,20 @@
 }
 
 .avatar-header {
-  margin-top: 150px;
+  margin-top: 20px;
+}
+
+#user-name {
+  color: white;
+  display: flex;
+  align-items: row;
+}
+
+ /* Change display when width is 768px og greater */
+@media only screen and (min-width: 768px) {
+  .header {
+    margin: 3rem 1rem;
+    width: 35%;
+    height: 350px;
+  }
 }

@@ -17,7 +17,7 @@ html {
 body {
   color: slategray;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -27,8 +27,34 @@ body {
 
  main.container {
    width: 100%;
-   height: max-content;
    display: flex;
    flex-direction: column;
-   align-items: center;
  }
+
+ .tweetsContent {
+   width: 100%;
+   padding: 3rem;
+ }
+
+ /* Change display when width is 768px og greater */
+ @media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+  }
+  main.container {
+    padding: 0 2rem;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+  }
+  header {
+    width: 40%;
+  }
+  .tweetsContent {
+    width: 65%;
+  }
+  .new-tweet {
+    margin: 3rem 1rem;
+    margin-top: 50px;
+  }
+}

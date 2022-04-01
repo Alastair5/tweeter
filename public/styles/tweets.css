@@ -2,13 +2,15 @@
   box-sizing: border-box;
   border-style: solid;
   border-width: 5px;
-  margin-top: 20px;
-  padding: 10px;
-  width: 70vw;
+  margin-top: 40px;
+  padding: 15px;
+  width: 100%;
   word-wrap: break-word;
 }
 
 .tweets-header {
+  width: 100%;
+  margin-top: 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,14 +28,16 @@
 
 .user-handle {
   margin-right: 20px;
-  opacity: 0.5;
+  color: rgb(199, 197, 197);
+  display: flex;
+  justify-content: right;
 }
 
 .tweets-footer {
   border-top: solid;
   border-top-width: 5px;
-  height: 4ex;
-  font-size: 60%;
+  height: 5ex;
+  font-size: 75%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,6 +45,7 @@
 
 .tweets:hover {
   box-shadow: 12px 12px 2px 1px lightgray;
+  color: black;
 }
 
 .date {

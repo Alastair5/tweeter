@@ -1,11 +1,13 @@
 /* eslint-disable no-undef */
 
+// Prevent XSS code
 const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// Create tweets with HTML markup
 const createTweetElement = function(tweetData) {
   $("#empty").hide();
   $("#exceeds").hide();
@@ -37,6 +39,7 @@ const createTweetElement = function(tweetData) {
   return $tweet;
 };
 
+// Render tweets to the top of the tweets list
 const renderTweets = function(data) {
   for (let tweet of data) {
     const $tweet = createTweetElement(tweet);
@@ -44,7 +47,7 @@ const renderTweets = function(data) {
   }
 };
 
-
+// Load tweets to pass to the rederTweets function
 $(document).ready(() => {
   const loadTweets = function() {
     $.ajax({type: "GET", url: "/tweets"})
@@ -54,6 +57,7 @@ $(document).ready(() => {
   };
   loadTweets();
 
+  // Submit tweet to page or throw error if parameters are not met
   $(".textarea").submit(function(event) {
     event.preventDefault();
     $("#empty").slideUp();
@@ -67,7 +71,7 @@ $(document).ready(() => {
     } else {
       $.post("/tweets", tweetInput);
       loadTweets();
-      return;
+      return $("#tweet-text").val("");
     }
   });
 });
