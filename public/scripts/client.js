@@ -69,9 +69,12 @@ $(document).ready(() => {
     } else if (tweetLimit > 140) {
       return $("#exceeds").slideDown();
     } else {
-      $.post("/tweets", tweetInput);
-      loadTweets();
-      return $("#tweet-text").val("");
+      $.post("/tweets", tweetInput).then((data) => {
+        $.get('/tweets', (serverResponse) => {
+          renderTweets(serverResponse.slice(-1));
+        });
+      });
+      return ($("#tweet-text").val(""), $('#counter').val(140));
     }
   });
 });
